@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Converter</string>
+    <string name="title">Basic converter</string>
+    <string-array name="bases">
+        <item>Bin</item>
+        <item>Dec</item>
+        <item>Hex</item>
+    </string-array>
+    <string name="input_string">Enter the number</string>
+    <string name="button">Convert</string>
+    <string name="to">To</string>
+    <string name="output">Output</string>
+    <string name="diffrent_basse">Enter different bases</string>
+    <string name="valid_input">Enter a valid input</string>
+    <string name="binary">Binary</string>
+    <string name="decimal">Decimal</string>
+    <string name="hexadecimal">Hexadecimal</string>
+</resources>

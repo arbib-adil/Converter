@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/purple">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin = "30dp"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end = "30dp"
+        />
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:hint="@string/input_string"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        android:layout_marginTop="100dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="0dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:background="@drawable/edittext_bg"/>
+
+    <TextView
+        android:id="@+id/msgError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        android:textSize="16sp"
+        android:textColor="@color/red"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        android:layout_marginEnd="190dp"/>
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/converter_title"
+        app:layout_constraintBottom_toTopOf="@+id/input"
+        android:layout_marginTop="100dp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+    <TextView
+        android:id="@+id/to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginEnd="7dp"
+        app:layout_constraintStart_toEndOf="@+id/spinner1"
+        app:layout_constraintEnd_toStartOf="@+id/spinner2"
+        app:layout_constraintTop_toTopOf="@+id/spinner1"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner1"/>
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        app:layout_constraintTop_toTopOf="@+id/spinner1"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner1"
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/converter_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title"
+        android:textSize="35sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="40dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        android:layout_marginTop="50dp"
+        android:text="@string/output"
+        android:textColor="@color/white"
+        android:textStyle="italic|bold"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="50dp"
+        android:text=""
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/output" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/result"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintEnd_toStartOf="@id/guideline_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/button"
+        android:background="@drawable/button"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
